@@ -96,18 +96,18 @@ public static void printUpperCase(String input){
     System.out.println(r);
   }
   else
-    System.out.println("Input is invalid.");
+    System.out.println("Input is invalid (null).");
 }
 ```
 
 or even:
 ```
 public static void printUpperCase(String i){
-  if (input!=null)
+  if (i!=null)
     System.out.println(i.toUpperCase());
 
   else
-    System.out.println("Input is invalid.");
+    System.out.println("Input is invalid (null).");
 }
 ```
 
@@ -117,5 +117,6 @@ It's a small change, but keeps things maintainable in the long run.
 ...Though if this were a more in-depth function, I'd also expect more comments, and a proper function header.
 
 ## Document one best practice you will follow when using AI tools at Focus Bear.
+
 
 Always double-check AI output. Check that code runs the way it's supposed to, and tidy up formatting errors every time to prevent long-term maintainability problems.
