@@ -53,4 +53,4 @@ A good commit message also makes it easier to find a specific commit in the log.
 ### How can poor commit messages cause issues later?
 Basically the inverse of the above. If a comment is unclear, it becomes impossible to learn what has been added to the project without wasting time analysing the code. Code reviewers would have to speak directly to the team member who made the commit to learn what the code is *supposed* to be doing.
 
-The more poorly-commented updates, the harder it becomes to find anything, and the longer it will take to roll things back.
+The more poorly-commented updates, the harder it becomes to find anything, and the longer it will take to roll things back. 
