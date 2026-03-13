@@ -10,8 +10,7 @@ import java.util.Random;
         Disclosure: This code was AI generated via GitHub Copilot as part of issue #59, then cleaned up.
         This was intended for testing git bisect, not as a coding exercise.
 
-        Last Updated: 2023-03-13, 7:42pm
-        (Adds intentional bug: no viable win condition)  
+        Last Updated: 2023-03-13, 7:45pm 
     */
     public class game {
         public static void main(String[] args) {
@@ -20,7 +19,8 @@ import java.util.Random;
             List<String> choices = Arrays.asList("rock","scissors","paper");
             
             //Get user's move
-            System.out.println("Let's play rock scissors paper!");
+            System.out.println("\n--- Let's Play! ---")
+            System.out.println("It's time for rock, scissors, paper!");
             System.out.print("Enter your choice (rock, scissors, paper): ");
             String playerChoice = scanner.nextLine().toLowerCase();
             String computerChoice = choices.get(computerIndex);
@@ -42,7 +42,7 @@ import java.util.Random;
                     (playerChoice.equals("scissors") && computerChoice.equals("scissors"))) 
                 System.out.println("You win!");
             else
-                System.out.println("You lose!");
+                System.out.println("You lose. Better luck next time!");
 
             //End the game
             scanner.close();
