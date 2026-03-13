@@ -10,7 +10,8 @@ import java.util.Random;
         Disclosure: This code was AI generated via GitHub Copilot as part of issue #59, then cleaned up.
         This was intended for testing git bisect, not as a coding exercise.
 
-        Last Updated: 2023-03-13, 7:45pm 
+        Last Updated: 2023-03-13, 7:48pm 
+        Oh, that last update broke a semicolon too. Well, it's part of the Git Bisect test now.
     */
     public class game {
         public static void main(String[] args) {
@@ -44,6 +45,7 @@ import java.util.Random;
             else
                 System.out.println("You lose. Better luck next time!");
 
+            System.out.println("\n-------\n");
             //End the game
             scanner.close();
         }
