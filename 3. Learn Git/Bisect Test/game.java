@@ -10,7 +10,8 @@ import java.util.Random;
         Disclosure: This code was AI generated via GitHub Copilot as part of issue #59, then cleaned up.
         This was intended for testing git bisect, not as a coding exercise.
 
-        Last Updated: 2023-03-13, 7:40pm
+        Last Updated: 2023-03-13, 7:42pm
+        (Adds intentional bug: no viable win condition)  
     */
     public class game {
         public static void main(String[] args) {
@@ -36,9 +37,9 @@ import java.util.Random;
                 System.out.println("...You're not *cheating*, are you? (Invalid input)");
             else if (playerChoice.equals(computerChoice)) 
                 System.out.println("It's a tie!");
-            else if ((playerChoice.equals("rock") && computerChoice.equals("scissors")) ||
-                    (playerChoice.equals("paper") && computerChoice.equals("rock")) ||
-                    (playerChoice.equals("scissors") && computerChoice.equals("paper"))) 
+            else if ((playerChoice.equals("rock") && computerChoice.equals("rock")) ||
+                    (playerChoice.equals("paper") && computerChoice.equals("paper")) ||
+                    (playerChoice.equals("scissors") && computerChoice.equals("scissors"))) 
                 System.out.println("You win!");
             else
                 System.out.println("You lose!");
