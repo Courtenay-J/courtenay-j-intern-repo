@@ -73,7 +73,7 @@ Git Bisect allows the reviewer to select which range of commits they'd like to t
 ## Advanced Git Commands
 *(In progress)*
 ### What does each command do?
-- `git-checkout main -- <file>`: Add a specific file from the main branch to the current branch.
+- `git-checkout main -- <file>`: Copies a file from one branch into the workplace of the current branch.
   - More info: [here](https://git-scm.com/docs/git-checkout).
 - `git cherry-pick <commit>`: Apply a commit from a different branch onto the current one, ignroing all other changes in that branch.
   - More info: [here](https://www.geeksforgeeks.org/git/git-cherry-pick/).
@@ -92,10 +92,12 @@ Git Bisect allows the reviewer to select which range of commits they'd like to t
     - `git blame -L start,end <file>` - pins the blame only within a certain range
 
 ### When would you use it in a real project (hint: these are all really important in long running projects with multiple developers)?
-- `git checkout main -- <file>`: I don't know yet.
+- `git checkout main -- <file>`: Useful if you only need a single file from one branch. Depending on the circumstances, this may be easier than rebasing the entire branch. Also useful for quick typo fixes?
 - `git cherry-pick`: Useful for placing a quick hotfix from one branch into another. Can also be used to quickly undo parts of a commit, useful if work was accidentally saved over. (Caution: can cause duplicate commits if used incorrectly, which would clutter up repo history.)
 - `git log --oneline`: useful for quickly summarising recent commits, or grabbing hashes in preparation for `git bisect`
 - `git blame`: quickly determine who contributed what to the current state of a file, and when. Good for when you need to contact the author(s) about the purpose of a change.
 
 ### What surprised you while testing these commands?
-I was surprised by how flexible `git blame` is.
+i was surprised by how flexible command parameters are. Being able to get information from another branch via `-b <branchname>` makes grabbing hashes or blame much faster than navigating the git webpage.
+
+I was loosely familiar with cherry-pick from my first year at Swinburne. I am surprised at how easy it is now that I understand what's actually happening.
