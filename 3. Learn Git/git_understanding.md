@@ -101,3 +101,15 @@ Git Bisect allows the reviewer to select which range of commits they'd like to t
 i was surprised by how flexible command parameters are. Being able to get information from another branch via `-b <branchname>` makes grabbing hashes or blame much faster than navigating the git webpage.
 
 I was loosely familiar with cherry-pick from my first year at Swinburne. I am surprised at how easy it is now that I understand what's actually happening.
+
+## Merge Conflicts & Conflicts Resolution
+### What caused the conflict?
+The contents of cherrypick-test.md were different in the `main` and `learn-git` branches. Git could not import the new file without potentially overriding the old one.
+
+(Yes, again. I used the same dummy file just to be safe.)
+
+### How did you resolve it?
+I opened the file in Visual Studio Code, which allowed me to choose which lines I wanted to keep vs. which I wanted to replace with a new version. Ultimately I decided to replace the whole file, but it was interesting to see that I could pick and choose which lines I wanted.
+
+### What did you learn?
+Not much - I had prior experience resolving conflicts from previous group projects. Regardless, it gave me the chance to see how VSC's interface handles it, and practice going line-by-line. (GitHub Desktop is not that granular, and would only permit you to pick one of the two files to keep.)
