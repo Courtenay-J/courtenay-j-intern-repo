@@ -53,4 +53,20 @@ A good commit message also makes it easier to find a specific commit in the log.
 ### How can poor commit messages cause issues later?
 Basically the inverse of the above. If a comment is unclear, it becomes impossible to learn what has been added to the project without wasting time analysing the code. Code reviewers would have to speak directly to the team member who made the commit to learn what the code is *supposed* to be doing.
 
-The more poorly-commented updates, the harder it becomes to find anything, and the longer it will take to roll things back.
+The more poorly-commented updates there are, the harder it becomes to find anything, and the longer it will take to roll things back.
+
+## Git Bisect
+### What does git bisect do?
+Git Bisect performs a binary search on a repository's history to determine which commit a problem originated in. First, the user specifies the most recent "bad" commit, then specifies the last-known "good" commit.
+
+Git Bisect then works backwards through the list, pausing on each commit to allow users to run test scripts on each commit. If the bug is still present, it can be labelled via `git bisect bad`. If the bug is not present, `git bisect good` is used instead.
+
+The commit with the error is therefore the last one to be labelled as bad.
+
+(Note that "old" and "new" can be used as a replacement for "bad" and "good", respectively. But you can't mix and match terms - e.g. "old" and "good" wouldn't work.)
+
+### When would you use it in a real-world debugging situation?
+Git Bisect is useful for pinpointing which commit introduced an error. Useful, if there are a lot of collaborators working on a single branch or project - no individual team member may understand how every single addition functions. 
+
+### How does it compare to manually reviewing commits?
+Git Bisect allows the reviewer to select which range of commits they'd like to test, and automatically queues them up for revision and labelling. It can't check code by itself - therefore, it still requires the user to either run a test script or manually review the code before labelling. But automating the binary search process stops the task from getting overwhelming.
