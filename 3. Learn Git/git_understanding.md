@@ -113,3 +113,22 @@ I opened the file in Visual Studio Code, which allowed me to choose which lines 
 
 ### What did you learn?
 Not much - I had prior experience resolving conflicts from previous group projects. Regardless, it gave me the chance to see how VSC's interface handles it, and practice going line-by-line. (GitHub Desktop is not that granular, and would only permit you to pick one of the two files to keep.)
+
+## Branching & Team Collaboration
+### Why is pushing directly to main problematic?
+Pushing changes to main is problematic for a number of reasons, particularly when working in large teams:
+- If every update is pushed into main, the commit history becomes cluttered. Code reviewers will have to sort through unrelated commits to find ones relevant to the feature they're working on.
+- It's the branch all other branches ultimately stem from, so an error on main (be it due to an oversight or an unfinished feature) would affect all new branches beyond that point. 
+- In general, branches provide a safe testing ground for developing new features. If something goes wrong, a branch can be rolled back or discarded without impacting the rest of the project. If everything was pushed to main, then separating the bad commits from the good ones gets much more complicated.
+
+### How do branches help with reviewing code?
+Assuming one branch focuses on the development of one update (a feature, a bug fix, etc.), branches keep the commit log focused on that topic. The code reviewer will not need to sort through every commit in the project - just the commit history of the branch.
+
+Since branches and their history are isolated, this allows reviewers to perform `git bisect` searches more easily. A branch being isolated means test scripts are more likely to pick up on bugs related to the changes being analysed.
+
+Finally, if all else fails: if is horribly broken in one branch and not another, the reviewer can manually compare the code of those two versions to identify the cause.
+
+### What happens if two people edit the same file on different branches?
+Initially, nothing. They are actually working on two isolated *copies* of the same file.
+
+It's only when a user tries to merge those branches into the same branch that a conflict occurs. When this happens, git will prompt the person performing the second commit to choose which parts to keep. See "Merge Conflicts & Conflicts Resolution" above.
