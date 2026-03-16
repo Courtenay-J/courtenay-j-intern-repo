@@ -73,10 +73,11 @@ Git Bisect allows the reviewer to select which range of commits they'd like to t
 ## Advanced Git Commands
 *(In progress)*
 ### What does each command do?
-- `git-checkout main -- <file>`:
+- `git-checkout main -- <file>`: Add a specific file from the main branch to the current branch.
   - More info: [here](https://git-scm.com/docs/git-checkout).
 - `git cherry-pick <commit>`: Apply a commit from a different branch onto the current one, ignroing all other changes in that branch.
-  - More info: [here](https://git-scm.com/docs/git-cherry-pick).
+  - More info: [here](https://www.geeksforgeeks.org/git/git-cherry-pick/).
+  - Note that this may cause conflicts (e.g. if a file does not already exist) - use Git Desktop to resolve it.
 - `git log`: Shows the commit history of the current branch, as well as the hash for each commit. (Useful for Git Bash)
   - `git log --oneline`: restricts this history to one line per commit. (Still displays hashes!)
   - `git log -b <branchname>`: View log of a branch you're not currently on.
