@@ -1,5 +1,5 @@
-# Creating and Reviewing Pull Requests
-## Notes:
+# Learning Git - Reflections
+## Notes
 (From [Beginner's Guide to GitHub](https://github.blog/developer-skills/github/beginners-guide-to-github-creating-a-pull-request/))
 - **Pull request:** proposal to merge a set of changes from one branch into another
 - **Source branch:** the one with your changes
@@ -8,7 +8,7 @@
 Writing comments into commits via command line:
 `git commit -m "title" -m "description"`
 
-## Reflections - Pull Requests
+## Pull Requests
 ### Why are PRs important in a team workflow?
 Branches allow team members to work on multiple aspects of the project simultaneously. Pull requests allow them to merge their changes with another branch (including the main one) once they're complete.
 
@@ -35,8 +35,7 @@ Some of the titles here are inconsistently formatted. e.g. some start with '[dev
 A few titles are just 'Bug Fix' - very uninformative.
 
 
-## Reflections - Commit Messages
-
+## Commit Messages
 ### What makes a good commit message?
 - Starts with what type of change it is (e.g. add, remove, fix, test...)
 - Is short, direct, and specific
@@ -70,3 +69,32 @@ Git Bisect is useful for pinpointing which commit introduced an error. Useful, i
 
 ### How does it compare to manually reviewing commits?
 Git Bisect allows the reviewer to select which range of commits they'd like to test, and automatically queues them up for revision and labelling. It can't check code by itself - therefore, it still requires the user to either run a test script or manually review the code before labelling. But automating the binary search process stops the task from getting overwhelming.
+
+## Advanced Git Commands
+*(In progress)*
+### What does each command do?
+- `git-checkout main -- <file>`:
+  - More info: [here](https://git-scm.com/docs/git-checkout).
+- `git cherry-pick <commit>`: Apply a commit from a different branch onto the current one, ignroing all other changes in that branch.
+  - More info: [here](https://git-scm.com/docs/git-cherry-pick).
+- `git log`: Shows the commit history of the current branch, as well as the hash for each commit. (Useful for Git Bash)
+  - `git log --oneline`: restricts this history to one line per commit. (Still displays hashes!)
+  - `git log -b <branchname>`: View log of a branch you're not currently on.
+- `git blame <filename>`: Displays information on who last updated each line of the file, and when. (Funniest possible name for this command, by the way.) This includes:
+  - The hash of the commit the line was last updated in
+  - The name of the line's author
+  - The timestamp of the update
+  - The line's number
+  - The contents of the line itself
+  - Or, by modifying the command:
+    - `git blame -e <file>` - shows the author's email instead of their name
+    - `git blame -L start,end <file>` - pins the blame only within a certain range
+
+### When would you use it in a real project (hint: these are all really important in long running projects with multiple developers)?
+- `git checkout main -- <file>`: I don't know yet.
+- `git cherry-pick`: Useful for placing a quick hotfix from one branch into another. Can also be used to quickly undo parts of a commit, useful if work was accidentally saved over. (Caution: can cause duplicate commits if used incorrectly, which would clutter up repo history.)
+- `git log --oneline`: useful for quickly summarising recent commits, or grabbing hashes in preparation for `git bisect`
+- `git blame`: quickly determine who contributed what to the current state of a file, and when. Good for when you need to contact the author(s) about the purpose of a change.
+
+### What surprised you while testing these commands?
+I was surprised by how flexible `git blame` is.
