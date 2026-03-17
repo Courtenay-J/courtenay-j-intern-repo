@@ -132,3 +132,16 @@ Finally, if all else fails: if is horribly broken in one branch and not another,
 Initially, nothing. They are actually working on two isolated *copies* of the same file.
 
 It's only when a user tries to merge those branches into the same branch that a conflict occurs. When this happens, git will prompt the person performing the second commit to choose which parts to keep. See "Merge Conflicts & Conflicts Resolution" above.
+
+## Staging vs. Committing
+### What is the difference between staging and committing?
+- `git add <filename>`: Staging changes *prepares* them for a future commit. Any staged file will be included in the next commit, whereas any unstaged files will be excluded from it (even if they've been modified). 
+- `git commit -m "Commit message"`: Committing changes *adds* the currently staged changes to the repository. 
+
+### Why does Git separate these two steps?
+Git separates these steps so you can have control over exactly what you upload, rather than always adding every change you've made.
+
+### When would you want to stage changes without committing?
+Git staging is helpful if you've modified multiple files, but only want to include a couple in the current commit. For example, if you've completed multiple tasks, separating the files into multiple commits results in a clearer history log and easier code revision. One commit should reflect one task. So, you can stage the files for task 1, commit it, then stage the files for task 2, and commit that.
+
+It's also useful if you want to avoid uploading unfinished files.
