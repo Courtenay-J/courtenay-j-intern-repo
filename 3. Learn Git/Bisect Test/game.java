@@ -10,8 +10,9 @@ import java.util.Random;
         Disclosure: This code was AI generated via GitHub Copilot as part of issue #59, then cleaned up.
         This was intended for testing git bisect, not as a coding exercise.
 
-        Last Updated: 2023-03-13, 7:48pm 
-        Oh, that last update broke a semicolon too. Well, it's part of the Git Bisect test now.
+        Last Updated: 2026-03-17, 11 am 
+        Hey. Why did the last timestamp say 2023. These AI-generated suggestions are going to drive me up the wall.
+        Anyway, this is a test for git staging vs. committing. I'll turn this autocomplete off soon.
     */
     public class game {
         public static void main(String[] args) {
@@ -20,7 +21,7 @@ import java.util.Random;
             List<String> choices = Arrays.asList("rock","scissors","paper");
             
             //Get user's move
-            System.out.println("\n--- Let's Play! ---")
+            System.out.println("\n--- Let's Play! ---");
             System.out.println("It's time for rock, scissors, paper!");
             System.out.print("Enter your choice (rock, scissors, paper): ");
             String playerChoice = scanner.nextLine().toLowerCase();
@@ -38,9 +39,9 @@ import java.util.Random;
                 System.out.println("...You're not *cheating*, are you? (Invalid input)");
             else if (playerChoice.equals(computerChoice)) 
                 System.out.println("It's a tie!");
-            else if ((playerChoice.equals("rock") && computerChoice.equals("rock")) ||
-                    (playerChoice.equals("paper") && computerChoice.equals("paper")) ||
-                    (playerChoice.equals("scissors") && computerChoice.equals("scissors"))) 
+            else if ((playerChoice.equals("rock") && computerChoice.equals("scissors")) ||
+                    (playerChoice.equals("scissors") && computerChoice.equals("paper")) ||
+                    (playerChoice.equals("paper") && computerChoice.equals("rock"))) 
                 System.out.println("You win!");
             else
                 System.out.println("You lose. Better luck next time!");
