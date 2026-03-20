@@ -164,17 +164,21 @@ Not much - I had prior experience resolving conflicts from previous group projec
 - Screenshots of using GitHub Desktop and VS Code to resolve conflicts:
 
 **Warning in GitHub Desktop**
+
 ![Warning in GitHub Desktop](conflict_a.png)
 
 **List of Conflicting Files**
+
 ![List of Conflicting Files](conflict_b.png)
 
 **VS Code allowing a choice between conflicting lines**
+
 ![VS Code conflict resolution](conflict_c.png)
 
 ![VS Code - edited file](conflict_d.png)
 
 **Conflict resolved**
+
 ![GitHub Desktop - Conflict resolved](conflict_e.png)
 
 ## Branching & Team Collaboration
