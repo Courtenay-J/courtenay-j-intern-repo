@@ -1,5 +1,5 @@
-This was a file I created for cherrypicking tests, but I'm presently using it to test `git checkout main -- cherrypick-test.md`.
+# Dummy FIle
 
-From what I gather, it's added the main version of the file to my workspace. Rather than cloning it like cherrypick did.
+I am using this file to test merge conflict issues between main and learn-git branches. Again, because I forgot to take screenshots the first time.
 
-Neat!
+Filler text. How are you doing today? I'm getting pretty hungry, to tell the truth. Half an hour to go until lunch!
