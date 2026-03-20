@@ -229,3 +229,7 @@ It's also useful if you want to avoid uploading unfinished files.
 
 ![All files staged](git_all_staged.png)
 ![Some files unstaged](git_some_unstaged.png)
+
+- Or, if using the CMD:
+
+![Git CMD screenshot showcasing use of commands](git_commit.png)
