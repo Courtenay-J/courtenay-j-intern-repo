@@ -128,6 +128,20 @@ i was surprised by how flexible command parameters are. Being able to get inform
 
 I was loosely familiar with cherry-pick from my first year at Swinburne. I am surprised at how easy it is now that I understand what's actually happening.
 
+## Testing Notes
+
+All commands were tested via Git CMD. (GitHub for Windows no longer includes a CLI.)
+
+- `git cherry-pick`: Tested with commit [hash 97b3551aeab12e652414e3a46bb4e2054dca61e1](https://github.com/Courtenay-J/courtenay-j-intern-repo/commit/97b3551aeab12e652414e3a46bb4e2054dca61e1).
+- `git checkout main --cherrypick_test.md`: [hash 1876637e4acb91da256042d62890c8896b26f720](https://github.com/Courtenay-J/courtenay-j-intern-repo/commit/1876637e4acb91da256042d62890c8896b26f720).
+- `git log --oneline`: Screenshot below.
+
+![Git Log --oneline](git_log.png)
+
+- `git blame`: Screenshot below.
+
+![Git Blame](git_blame.png)
+
 ## Merge Conflicts & Conflicts Resolution
 
 ### What caused the conflict?
