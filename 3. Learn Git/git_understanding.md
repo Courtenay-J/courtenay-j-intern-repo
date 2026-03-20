@@ -158,6 +158,25 @@ I opened the file in Visual Studio Code, which allowed me to choose which lines 
 
 Not much - I had prior experience resolving conflicts from previous group projects. Regardless, it gave me the chance to see how VSC's interface handles it, and practice going line-by-line. (GitHub Desktop is not that granular, and would only permit you to pick one of the two files to keep.)
 
+### Test Notes
+
+- Relevant commits: [One](https://github.com/Courtenay-J/courtenay-j-intern-repo/commit/054af0851e777adeb08bbcdac5f901d3397cc35d), [two](https://github.com/Courtenay-J/courtenay-j-intern-repo/commit/03d5a771e5b461595f82881c37e695ba5d24b4c3), [merge](https://github.com/Courtenay-J/courtenay-j-intern-repo/commit/0b5f9b198419491c0fc9edecae2694700716db79).
+- Screenshots of using GitHub Desktop and VS Code to resolve conflicts:
+
+**Warning in GitHub Desktop**
+![Warning in GitHub Desktop](conflict_a.png)
+
+**List of Conflicting Files**
+![List of Conflicting Files](conflict_b.png)
+
+**VS Code allowing a choice between conflicting lines**
+![VS Code conflict resolution](conflict_c.png)
+
+![VS Code - edited file](conflict_d.png)
+
+**Conflict resolved**
+![GitHub Desktop - Conflict resolved](conflict_e.png)
+
 ## Branching & Team Collaboration
 
 ### Why is pushing directly to main problematic?
@@ -199,7 +218,7 @@ Git staging is helpful if you've modified multiple files, but only want to inclu
 
 It's also useful if you want to avoid uploading unfinished files.
 
-## Test notes
+### Test notes
 
 - Staging tested via [commit 112cd2fdb239d6945d0001bacd5b01851f243ddf](https://github.com/Courtenay-J/courtenay-j-intern-repo/commit/112cd2fdb239d6945d0001bacd5b01851f243ddf). (Obviously, only the staged files were added to this commit. The unstaged files remained on my computer.)
 - Staging is possible in both Git CMD and GitHub Desktop. The latter is easier, as checking/unchecking boxes in the interface stages/unstages those files. In these screenshots, the items with checkmarks on the left are staged and the others are unstaged. Green items are new files, while yellow items are modified files.
