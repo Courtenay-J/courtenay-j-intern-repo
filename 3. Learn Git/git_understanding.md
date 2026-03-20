@@ -198,3 +198,11 @@ Git separates these steps so you can have control over exactly what you upload, 
 Git staging is helpful if you've modified multiple files, but only want to include a couple in the current commit. For example, if you've completed multiple tasks, separating the files into multiple commits results in a clearer history log and easier code revision. One commit should reflect one task. So, you can stage the files for task 1, commit it, then stage the files for task 2, and commit that.
 
 It's also useful if you want to avoid uploading unfinished files.
+
+## Test notes
+
+- Staging tested via [commit 112cd2fdb239d6945d0001bacd5b01851f243ddf](https://github.com/Courtenay-J/courtenay-j-intern-repo/commit/112cd2fdb239d6945d0001bacd5b01851f243ddf). (Obviously, only the staged files were added to this commit. The unstaged files remained on my computer.)
+- Staging is possible in both Git CMD and GitHub Desktop. The latter is easier, as checking/unchecking boxes in the interface stages/unstages those files. In these screenshots, the items with checkmarks on the left are staged and the others are unstaged. Green items are new files, while yellow items are modified files.
+
+![All files staged](git_all_staged.png)
+![Some files unstaged](git_some_unstaged.png)
