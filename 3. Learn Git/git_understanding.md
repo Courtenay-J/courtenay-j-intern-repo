@@ -136,11 +136,11 @@ All commands were tested via Git CMD. (GitHub for Windows no longer includes a C
 - `git checkout main --cherrypick_test.md`: [hash 1876637e4acb91da256042d62890c8896b26f720](https://github.com/Courtenay-J/courtenay-j-intern-repo/commit/1876637e4acb91da256042d62890c8896b26f720).
 - `git log --oneline`: Screenshot below.
 
-![Git Log --oneline](git_log.png)
+![Git Log --oneline](git_log.PNG)
 
 - `git blame`: Screenshot below.
 
-![Git Blame](git_blame.png)
+![Git Blame](git_blame.PNG)
 
 ## Merge Conflicts & Conflicts Resolution
 
@@ -165,21 +165,21 @@ Not much - I had prior experience resolving conflicts from previous group projec
 
 **Warning in GitHub Desktop**
 
-![Warning in GitHub Desktop](conflict_a.png)
+![Warning in GitHub Desktop](conflict_a.PNG)
 
 **List of Conflicting Files**
 
-![List of Conflicting Files](conflict_b.png)
+![List of Conflicting Files](conflict_b.PNG)
 
 **VS Code allowing a choice between conflicting lines**
 
-![VS Code conflict resolution](conflict_c.png)
+![VS Code conflict resolution](conflict_c.PNG)
 
-![VS Code - edited file](conflict_d.png)
+![VS Code - edited file](conflict_d.PNG)
 
 **Conflict resolved**
 
-![GitHub Desktop - Conflict resolved](conflict_e.png)
+![GitHub Desktop - Conflict resolved](conflict_e.PNG)
 
 ## Branching & Team Collaboration
 
@@ -227,9 +227,9 @@ It's also useful if you want to avoid uploading unfinished files.
 - Staging tested via [commit 112cd2fdb239d6945d0001bacd5b01851f243ddf](https://github.com/Courtenay-J/courtenay-j-intern-repo/commit/112cd2fdb239d6945d0001bacd5b01851f243ddf). (Obviously, only the staged files were added to this commit. The unstaged files remained on my computer.)
 - Staging is possible in both Git CMD and GitHub Desktop. The latter is easier, as checking/unchecking boxes in the interface stages/unstages those files. In these screenshots, the items with checkmarks on the left are staged and the others are unstaged. Green items are new files, while yellow items are modified files.
 
-![All files staged](git_all_staged.png)
-![Some files unstaged](git_some_unstaged.png)
+![All files staged](git_all_staged.PNG)
+![Some files unstaged](git_some_unstaged.PNG)
 
 - Or, if using the CMD:
 
-![Git CMD screenshot showcasing use of commands](git_commit.png)
+![Git CMD screenshot showcasing use of commands](git_commit.PNG)
