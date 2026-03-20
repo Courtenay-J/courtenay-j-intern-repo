@@ -1,5 +1,5 @@
-# Dummy FIle
+# Dummy File
 
-I am using this file to test merge conflict issues between main and learn-git branches. Again, because I forgot to take screenshots the first time.
+I want to create a merge conflict, so I'm changing the contents of this file on main. Again. Bla bla bla bla bla
 
-Filler text. How are you doing today? I'm getting pretty hungry, to tell the truth. Half an hour to go until lunch!
+Bla bla bla bla bla bla.
