@@ -1,11 +1,9 @@
-import { useState } from 'react'
+
 import './App.css'
 import { HelloWorld } from './HelloWorld.jsx'
-
+import { Counter} from './Counter.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <section id="center">
@@ -18,18 +16,14 @@ function App() {
             It'd be nice if VS Code would stop recommending sentences for me to type here.
           </p>
           <p>
-            <HelloWorld name="Fozzie" />
+            <HelloWorld fname="Fozzie" species="Bare"/>
+            <Counter text="Clicks:" /> <Counter text="More Clicks:" /> <Counter text="Even More Clicks:" />
           </p>
         </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
       </section>
 
       <section id="spacer"><p>Testing testing one two three.</p></section>
+      
 
     </>
   )

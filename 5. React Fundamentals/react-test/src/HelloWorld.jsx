@@ -1,8 +1,8 @@
-export function HelloWorld(props) {
+export function HelloWorld(name) {
   return (
   <>
     <h2>Hello, Focus Bear!</h2>
-    <p>Or maybe that's "{props.name}"...?</p>
+    <p>Or maybe that's "{name.fname}" "{name.species}"...?</p>
   </>
   );
  }
