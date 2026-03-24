@@ -19,7 +19,7 @@ export function Counter(props){
 
     return(
         <button
-            className="counter"
+            class="bg-amber-200 hover:bg-amber-300 text-black font-mono py-2 px-7 rounded"
             onClick={() => {
                 setCount((count) => count + 1)
                 setText("Click number ")

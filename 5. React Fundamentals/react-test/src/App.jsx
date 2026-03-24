@@ -21,8 +21,8 @@ function App() {
             <Counter text="Clicks:" /> <Counter text="More Clicks:" /> <Counter text="Even More Clicks:" />
           </p>
 
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Button
+          <button class="bg-green-900 hover:bg-green-950 text-white py-2 px-4 rounded-3xl">
+            This button should be Styled
           </button>
         </div>
       </section>
