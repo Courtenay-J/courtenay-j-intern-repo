@@ -26,6 +26,27 @@ The 'state' tells React what the UI should look like at any given moment. If a v
 
 `setState()` both stores the new information and forces the interface to render it.
 
+## Working with Tailwind CSS
+
+### What are the advantages of using Tailwind CSS?
+
+Tailwind CSS allows finer control over the look of your user interface. Rather than needing to create or edit page-specific css files, Tailwind lets you write style rules for individual elements. For example:
+
+> `<button type="submit" class="font-bold border-2 rounded px-2 hover:opacity-50"> Add</button>`
+
+This would create a form button with a border, rounded edges, that becomes partially transparent when hovered over. Useful, if you only want one button to look like this rather than every single button.
+
+Keeping everything in one file can *sometimes* save time: rather than needing to locate a stylesheet linked to a webpage, you can simply look at the element in the HTML.
+
+### What are some potential pitfalls?
+
+- Not linking files up correctly: Tailwind won't work unless all the configuration files are correct. (I wasted an hour and a half on this today...)
+- Incorrect keywords: Tailwind uses abbreviations of common css terms. e.g. `text-color:red` becomes `text-red-100`
+- May encourage repetition in code: Since every component can be styled individually, it is both easy and very poor form to copy-paste the rules of one object onto another. Use a css file, or create a component.
+- CSS Conflicts: .css files can overwrite Tailwind rules, depending on their priority.
+- Very long, very complicated class rules can become unreadable. The more elements you have with long rules, the more difficult it is for a human to make sense of.
+- Not using the config file: Apparently it can be used to create your own presets and rules, so you can apply them consistently across elements. Neat! (And not using them would result in a lot of wasted time copy-pasting... I'll have to experiment with that more.)
+
 ## Working with Lists & User Input
 
 ### What are some common issues when working with lists in React?

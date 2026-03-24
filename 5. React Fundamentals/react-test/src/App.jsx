@@ -17,7 +17,7 @@ function App() {
             It'd be nice if VS Code would stop recommending sentences for me to type here.
           </p>
           <p>
-            <HelloWorld fname="Fozzie" species="Bare"/>
+            <HelloWorld fname="Fozzie" species="Bare" />
             <Counter text="Clicks:" /> <Counter text="More Clicks:" /> <Counter text="Even More Clicks:" />
           </p>
 

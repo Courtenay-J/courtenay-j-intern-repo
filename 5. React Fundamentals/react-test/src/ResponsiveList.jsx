@@ -21,8 +21,9 @@ export function ResponsiveList(){
             <label for="input">Enter some text:   </label>
             <input type="text" 
                 value={text}
-                onChange={e=>setText(e.target.value)}></input>
-            <button type="submit" >Add</button>
+                onChange={e=>setText(e.target.value)}
+                class="border-2 rounded-2xl"></input>
+            <button type="submit" class="font-bold border-2 rounded px-2 hover:opacity-50"> Add</button>
         </form>
 
 
