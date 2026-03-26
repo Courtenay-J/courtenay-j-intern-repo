@@ -8,6 +8,8 @@ This is my first time using React, so there were some initial difficulties in wo
 
 I've attempted to set up the ESLint tool provided, with stricter formatting rules enabled. I am unclear if it worked: `npx eslint .` runs, but does not print messages to console like it is meant to. I will continue to investigate this.
 
+Installing Tailwind CSS proved trickier than I hoped. I spent a lot of time combing through conflicting tutorials, trying to work out which file I forgot to import the script in. It turns out I was using an installation guide for Tailwind V3, while Vite had actually installed V4. This changed the required import statements in a way VS Code couldn't automatically pick up on.
+
 ## Understanding Components & Props
 
 ### Why are components important in React?
@@ -36,13 +38,13 @@ Tailwind CSS allows finer control over the look of your user interface. Rather t
 
 This would create a form button with a border, rounded edges, that becomes partially transparent when hovered over. Useful, if you only want one button to look like this rather than every single button.
 
-Keeping everything in one file can *sometimes* save time: rather than needing to locate a stylesheet linked to a webpage, you can simply look at the element in the HTML.
+Keeping everything in one file can *sometimes* save time and *sometimes* improve readability: rather than needing to locate a stylesheet linked to a webpage, you can simply look at the element in the HTML and read what rules apply to it.
 
 ### What are some potential pitfalls?
 
 - Not linking files up correctly: Tailwind won't work unless all the configuration files are correct. (I wasted an hour and a half on this today...)
-- Incorrect keywords: Tailwind uses abbreviations of common css terms. e.g. `text-color:red` becomes `text-red-100`
-- May encourage repetition in code: Since every component can be styled individually, it is both easy and very poor form to copy-paste the rules of one object onto another. Use a css file, or create a component.
+- Typing incorrect keywords, courtesy of muscle memory: Tailwind uses abbreviations of common css terms. e.g. `text-color:red` becomes `text-red-100`
+- May encourage repetition in code: Since every component can be styled individually, it is both easy and very poor form to copy-paste the rules of one object onto another. Use a css file, or create a component and use that.
 - CSS Conflicts: .css files can overwrite Tailwind rules, depending on their priority.
 - Very long, very complicated class rules can become unreadable. The more elements you have with long rules, the more difficult it is for a human to make sense of.
 - Not using the config file: Apparently it can be used to create your own presets and rules, so you can apply them consistently across elements. Neat! (And not using them would result in a lot of wasted time copy-pasting... I'll have to experiment with that more.)
