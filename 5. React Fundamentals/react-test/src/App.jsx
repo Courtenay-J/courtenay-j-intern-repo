@@ -8,20 +8,21 @@ function App() {
   return (
     <BrowserRouter>
     <div id="header">
-      <nav>
-        <Link to="/Home">Home</Link> | {" "}
-        <Link to="/Profile">Profile</Link> | {" "}
-        <Link to="/Tests">Tests</Link>
+      <nav class="py-3">
+        <Link to="/"><button class="navbtn">Home</button></Link> {" "}
+        <Link to="/Profile"><button class="navbtn">Profile</button></Link> {" "}
+        <Link to="/Tests"><button class="navbtn">Tests</button></Link>
       </nav>
-      <hr></hr>
     </div>
 
-    <div id="spacer"></div>
-      <Routes>
-        <Route path="/Home" element={<Home />} />
-        <Route path="/Profile" element={<Profile />} />
-        <Route path="/Tests" element={<Tests />} />
-      </Routes>
+    <body>
+    <hr></hr>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Tests" element={<Tests />} />
+        </Routes>
+      </body>  
     <div id="footer"></div>
     </BrowserRouter>
   )

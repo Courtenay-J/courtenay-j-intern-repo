@@ -11,7 +11,6 @@ export function Tests() {
             A dumping ground for test components and routing experiments.
         </p>
         <p>
-            <HelloWorld fname="Fozzie" species="Bare" />
             <Counter text="Clicks:" /> <Counter text="More Clicks:" /> <Counter text="Even More Clicks:" />
         </p>
 
