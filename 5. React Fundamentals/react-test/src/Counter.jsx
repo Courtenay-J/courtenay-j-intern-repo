@@ -11,8 +11,6 @@ import { useState } from 'react'
     visual flare to practice state hooks.
 */
 
-
-
 export function Counter(props){
     const [count, setCount] = useState(0)   //Track number of clicks
     const [text, setText] = useState(props.text)    //Track text to display

@@ -8,7 +8,7 @@ This is my first time using React, so there were some initial difficulties in wo
 
 I've attempted to set up the ESLint tool provided, with stricter formatting rules enabled. I am unclear if it worked: `npx eslint .` runs, but does not print messages to console like it is meant to. I will continue to investigate this.
 
-Installing Tailwind CSS proved trickier than I hoped. I spent a lot of time combing through conflicting tutorials, trying to work out which file I forgot to import the script in. It turns out I was using an installation guide for Tailwind V3, while Vite had actually installed V4. This changed the required import statements in a way VS Code couldn't automatically pick up on.
+Installing Tailwind CSS proved trickier than I hoped. I spent a lot of time combing through conflicting tutorials, trying to work out which file I forgot to import the script in. It turns out I was using an installation guide for Tailwind V3, while Vite had actually installed V4. This changed the required import statements in a way VS Code couldn't automatically detect.
 
 ## Understanding Components & Props
 
@@ -56,3 +56,13 @@ Keeping everything in one file can *sometimes* save time and *sometimes* improve
 Since React is so reliant on states, any array that's *in* a state should be treated as read-only. Attempting to modify parts of an existing array can lead to mutations and general weirdness. For example: setting an individual value via `arr[0] = 1` would result in the change *not* being reflected in the state, and cause mutations in the code. Instead, you'll want to create a new array, (generally) copy the contents of the old one into that, modify it, and then pass the new array into the state.
 
 (Also, mixing up `slice` (copy a part of an array) and `splice` (mutate an existing array by inserting or deleting items) can cause a lot of accidental mutations. Always look for the 'p'!)
+
+## Navigation with React Routing
+
+### What are the advantages of client-side routing?
+
+*Note: no version of React Router was specified, so I used react-router-dom installation for this task. It uses the Declarative routing framework.*
+
+Client-side routing allows for "smoother" navigation of a web application. Server-side routing requires the browser to request a document each time a link is clicked, and subsequently reload the tab with each new page. Client-side routing bypasses this. When a link is clicked, it instead fetches the required data and updates the existing browser tab and URL. When set up properly, it's quite seamless.
+
+Nested client-side routing makes this even smoother, allowing one part of a page to be reloaded or updated (i.e. with another page's contents) while the rest of the page remains the same.
