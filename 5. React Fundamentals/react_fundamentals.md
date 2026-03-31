@@ -4,11 +4,11 @@
 
 ### What challenges did you face during setup?
 
-This is my first time using React, so there were some initial difficulties in working out how installation was even supposed to function. Fortunately, I've had plenty of practice with the command line. Unfortunately, some of the tutorials I initially turned to would have been very out of date and full of vulnerabilities. I decided not to use those, and instead used W3Schools's "Your First React App" guide, then used Tailwind's guide to customise the installation.
+This is my first time using React, so I found it challenging determining how installation was even supposed to function. Fortunately, I've had plenty of practice with the command line. Unfortunately, some of the tutorials I initially turned to would have been very out of date and full of vulnerabilities. I resolved this by doing more research and ultimately used W3Schools's "Your First React App" guide, then used Tailwind's guide to customise the installation.
 
 I've attempted to set up the ESLint tool provided, with stricter formatting rules enabled. I am unclear if it worked: `npx eslint .` runs, but does not print messages to console like it is meant to. I will continue to investigate this.
 
-Installing Tailwind CSS proved trickier than I hoped. I spent a lot of time combing through conflicting tutorials, trying to work out which file I forgot to import the script in. It turns out I was using an installation guide for Tailwind V3, while Vite had actually installed V4. This changed the required import statements in a way VS Code couldn't automatically detect.
+Installing Tailwind CSS proved trickier than I hoped. I had difficulties figuring out which import calls to use in which files. I spent a lot of time combing through conflicting tutorials, trying to work out which file I forgot to import the script in. It turns out I was using the wrong installation guide. I had incorrectly used Tailwind V3's guide, while Vite had actually installed V4. This changed the required import statements in a way VS Code couldn't automatically detect. I fixed the import statements and now have a better understanding of how to import libraries.
 
 ## Understanding Components & Props
 
