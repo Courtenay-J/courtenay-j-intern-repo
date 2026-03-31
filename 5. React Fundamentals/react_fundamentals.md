@@ -59,6 +59,13 @@ Since React is so reliant on states, any array that's *in* a state should be tre
 
 ## Navigation with React Routing
 
+### Location of files
+
+I gained permission from Jeremy to use .jsx files for this task instead of .js. The files can be found here:
+- [Home.jsx](https://github.com/Courtenay-J/courtenay-j-intern-repo/blob/main/5.%20React%20Fundamentals/react-test/src/Home.jsx)
+- [Profile.jsx](https://github.com/Courtenay-J/courtenay-j-intern-repo/blob/main/5.%20React%20Fundamentals/react-test/src/Profile.jsx)
+- [Commit link](https://github.com/Courtenay-J/courtenay-j-intern-repo/pull/68/changes/aa192ff1e23c30d8c7ce34b9f693a6e4481bf140)
+
 ### What are the advantages of client-side routing?
 
 *Note: no version of React Router was specified, so I used react-router-dom installation for this task. It uses the Declarative routing framework.*
