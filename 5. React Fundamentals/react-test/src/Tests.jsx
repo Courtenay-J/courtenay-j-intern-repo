@@ -1,6 +1,5 @@
-import { HelloWorld } from './HelloWorld.jsx'
-import { Counter} from './Counter.jsx'
-import { ResponsiveList } from './ResponsiveList.jsx'
+import { Counter} from './components/Counter.jsx'
+import { ResponsiveList } from './components/ResponsiveList.jsx'
 
 export function Tests() {
   return (

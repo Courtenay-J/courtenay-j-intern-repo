@@ -1,4 +1,4 @@
-import { ResponsiveList } from './ResponsiveList.jsx'
+import { ResponsiveList } from './components/ResponsiveList.jsx'
 
 export function Profile() {
   return (
@@ -18,4 +18,4 @@ export function Profile() {
         </p>
     </>
   );
-}
+} 
