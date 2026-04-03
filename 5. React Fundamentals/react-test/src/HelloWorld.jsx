@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 /*
   HelloWorld: Prints a greeting. Ahh, coding traditions.
 
@@ -5,10 +6,12 @@
 */
 
 export function HelloWorld(name) {
+  const [t] = useTranslation();
+  
   return (
   <>
-    <h1>Hello, Focus Bear!</h1>
-    <h2>Or maybe that's "{name.fname} {name.species}"...?</h2>
+    <h1>{t('helloWorld.greeting')}</h1>
+    <h2>{t('helloWorld.joke')} "{name.fname} {name.species}"...?</h2>
   </>
   );
  }
