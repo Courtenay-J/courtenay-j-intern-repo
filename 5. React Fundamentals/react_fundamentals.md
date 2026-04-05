@@ -73,3 +73,17 @@ I gained permission from Jeremy to use .jsx files for this task instead of .js. 
 Client-side routing allows for "smoother" navigation of a web application. Server-side routing requires the browser to request a document each time a link is clicked, and subsequently reload the tab with each new page. Client-side routing bypasses this. When a link is clicked, it instead fetches the required data and updates the existing browser tab and URL. When set up properly, it's quite seamless.
 
 Nested client-side routing makes this even smoother, allowing one part of a page to be reloaded or updated (i.e. with another page's contents) while the rest of the page remains the same.
+
+## Making API Calls with Axios
+
+### Notes
+
+- [Promised-Based fundamentals](https://javascript.info/promise-basics)
+  - There is only one single resolve or error per Promise (whichever triggers first). Further calls are ignored.
+  - Recommended to use *Error* objects whe
+
+### Why is it useful to create a reusable Axios instance?
+
+### How does intercepting requests help with authentication?
+
+## What happens if an API request times out, and how can you handle it?
