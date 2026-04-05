@@ -2,6 +2,11 @@
 
 ## useEffect
 
+Relevant files:
+
+- [UseEffectTest.jsx](https://github.com/Courtenay-J/courtenay-j-intern-repo/blob/main/5.%20React%20Fundamentals/react-test/src/components/UseEffectTest.jsx)
+- [Home.jsx](https://github.com/Courtenay-J/courtenay-j-intern-repo/blob/main/5.%20React%20Fundamentals/react-test/src/Home.jsx)
+
 ### When should you use useEffect instead of handling logic inside event handlers?
 
 The `useEffect` hook allows you to add 'side effects' to functions/React components. These 'side effects' can interact with outside scripts, and do not affect the rendering of the component it is attached to. They're often used when doing something kinda unpredictable, like making an API call.
@@ -18,6 +23,11 @@ Not specifying any sort of conditional trigger for `useEffect` will cause it to 
 
 ## useMemo
 
+Relevant files:
+
+- [UseMemoTest.jsx](https://github.com/Courtenay-J/courtenay-j-intern-repo/blob/main/5.%20React%20Fundamentals/react-test/src/components/UseMemoTest.jsx)
+- [Tests.jsx](https://github.com/Courtenay-J/courtenay-j-intern-repo/blob/main/5.%20React%20Fundamentals/react-test/src/Tests.jsx)
+
 ### How does useMemo improve performance?
 
 `useMemo` improves performance by caching a value after its calculation. This saves JavaScript from needing to re-calculate the value every render cycle, as it would otherwise need to. It's most useful for long, complicated, "expensive" calculations.
@@ -33,6 +43,13 @@ Like all hooks, `useMemo` should only be used in top level functions of a compon
 *Any* button clicked on Test.jsx would take significantly longer to process. This is because the page would have to re-calculate the extremely long number list and calclulations every time *anything* on the page is updated.
 
 ## useCallback
+
+Relevant files:
+
+- [UseCallbackParent.jsx](https://github.com/Courtenay-J/courtenay-j-intern-repo/blob/main/5.%20React%20Fundamentals/react-test/src/components/UseCallbackParent.jsx)
+- [UseCallbackButton.jsx](https://github.com/Courtenay-J/courtenay-j-intern-repo/blob/main/5.%20React%20Fundamentals/react-test/src/components/UseCallbackButton.jsx)
+- [UseCallbackTitle.jsx](https://github.com/Courtenay-J/courtenay-j-intern-repo/blob/main/5.%20React%20Fundamentals/react-test/src/components/UseCallbackTitle.jsx)
+- [Profile.jsx](https://github.com/Courtenay-J/courtenay-j-intern-repo/blob/main/5.%20React%20Fundamentals/react-test/src/Profile.jsx)
 
 ### What problem does useCallback solve?
 
