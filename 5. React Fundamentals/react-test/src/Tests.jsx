@@ -1,5 +1,6 @@
 import { Counter} from './components/Counter.jsx'
 import { ResponsiveList } from './components/ResponsiveList.jsx'
+import { UseMemoTest } from './components/UseMemoTest.jsx'
 
 export function Tests() {
   return (
@@ -20,7 +21,7 @@ export function Tests() {
           </p>
         </div>
 
-        <p><ResponsiveList /></p>
+        <UseMemoTest />
     
     </>
   )
