@@ -31,3 +31,29 @@ Like all hooks, `useMemo` should only be used in top level functions of a compon
 ### What happens if you remove useMemo from your implementation?
 
 *Any* button clicked on Test.jsx would take significantly longer to process. This is because the page would have to re-calculate the extremely long number list and calclulations every time *anything* on the page is updated.
+
+## useCallback
+
+### What problem does useCallback solve?
+
+`useCallback` is primarily used to pass a function to a component wrapped in `React.memo`. It memoizes (caches) the reference for the function, keeping its behaviour consistent and preventing unnecessary rerenders. It will only rerender the component if something in the code changes.
+
+It's useful for when you have child components of a larger component, and want to share functionality from parent to child.
+
+### How does useCallback work differently from useMemo?
+
+`useMemo` caches the final result of a function, skipping over calculations and simply displaying the latest result. It only updates the 'memo' when its dependencies change.
+
+`useCallback` caches a function itself to ensure consistent behaviour across renders. It's useful when you're treating a function as a prop across child components.
+
+In other words, useMemo is for the result of a function, and useCallback is for the component/function itself.
+
+### When would useCallback not be useful?
+
+`useCallback` has the same base limitations as `useMemo`: it's subject to React Hook rules, it's best saved for performance optimisation, and isn't terribly useful for small functions that are only run once or twice.
+
+If only the end result of the function is important, then `useMemo` should be used instead.
+
+If the page is simple and the function isn't slowing down renders, then there's not much point cluttering up your code with `useCallback`.
+
+React Compiler also automatically "memoizes" (caches) functions, so if a development pipeline utilises it, manual `useCallback` calls are redundant.

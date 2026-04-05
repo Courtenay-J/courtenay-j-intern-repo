@@ -1,4 +1,6 @@
 import { ResponsiveList } from './components/ResponsiveList.jsx'
+import { UseCallbackParent } from './components/UseCallbackParent.jsx'
+import { Counter } from './components/Counter.jsx'
 
 export function Profile() {
   return (
@@ -12,10 +14,8 @@ export function Profile() {
 
         <hr></hr>
 
-        <h2>To-Do List:</h2>
-        <p>
-            <ResponsiveList />
-        </p>
+      <UseCallbackParent />
+      <p><Counter /></p>
     </>
   );
 } 
