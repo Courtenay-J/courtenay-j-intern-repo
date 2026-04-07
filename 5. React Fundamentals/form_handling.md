@@ -1,5 +1,9 @@
 # Handling form errors with Formik
 
+Relevant files:
+
+- [FormikTest.jsx](https://github.com/Courtenay-J/courtenay-j-intern-repo/blob/react-fundamentals/5.%20React%20Fundamentals/react-test/src/FormikTest.jsx)
+
 ## How does Formik simplify form management compared to handling state manually?
 
 Attempting to manually manage the state of a form is not only time consuming, but results in duplicated code and an increased likelihood of typos breaking your script.
@@ -31,7 +35,7 @@ const validate = values =>{
 
     if (!values.email)
         errors.email = 'Required'
-        
+
     else if (!/^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/i.test(values.email))
         errors.email = 'Invalid email format'
 
