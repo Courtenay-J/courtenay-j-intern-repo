@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Profile } from './Profile.jsx';
 import { Tests } from './Tests.jsx';
 import { Home } from './Home.jsx';
+import { FormikTest } from './FormikTest.jsx';
 
 
 function App() {
@@ -16,17 +17,17 @@ function App() {
         <Link to="/"><button class="navbtn">{t('navBar.home')}</button></Link> {" "}
         <Link to="/Profile"><button class="navbtn">{t('navBar.profile')}</button></Link> {" "}
         <Link to="/Tests"><button class="navbtn">{t('navBar.tests')}</button></Link>
+        <Link to="/FormikTest"><button class="navbtn">Formik</button></Link>
       </nav>
     </div>
 
-    <body>
     <hr></hr>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Tests" element={<Tests />} />
+          <Route path="/FormikTest" element={<FormikTest />} />
         </Routes>
-      </body>  
     <div id="footer"></div>
     </BrowserRouter>
   )
