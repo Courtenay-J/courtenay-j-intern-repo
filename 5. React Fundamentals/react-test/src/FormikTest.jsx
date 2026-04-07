@@ -7,26 +7,14 @@ const initialValues = {
 }
 
 const onSubmit = values => {
-    console.log('clicked')
     console.log('Form data',values)
-}
-
-const validate = values =>{
-   let errors = {}
-    if (!values.name)
-        errors.name = 'Required'
-
-    if (!values.email)
-        errors.email = 'Required'
-    else if (!/^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/i.test(values.email))
-        errors.email = 'Invalid email format'
-
-    return errors
 }
 
 const validationSchema = Yup.object({
     name: Yup.string().required("Required"),
-    email: Yup.string().email("Invalid email format").required("Required")
+    email: Yup.string()
+            .email("Invalid email format")
+            .required("Required")
 })
 
 export function FormikTest() {
@@ -46,17 +34,14 @@ export function FormikTest() {
                 <label for="name">Name</label>
                 <input type="text"
                     name="name" id="name"
-                    onChange={formik.handleChange}
-                    value={formik.values.name}
+                    {...formik.getFieldProps('name')}
                 />
             </div>
             {formik.errors.name ? <div className="errors">{formik.errors.name}</div> : null}
             <div className="form-control">
                 <label for="email">Email</label>
                 <input type="email"
-                    name="email" id="email"
-                    onChange={formik.handleChange}
-                    value={formik.values.email}
+                   {...formik.getFieldProps('email')}
                 />
             </div>
             {formik.errors.email ? <div className="errors">{formik.errors.email}</div> : null}
